@@ -1,0 +1,21 @@
+[package]
+name = "lab_2"
+version = "0.1.0"
+edition = "2021"
+
+[build]
+rustflags = ["-Z", "threads=8"]
+
+[profile.dev]
+split-debuginfo = "unpacked"
+debug = 0
+
+[profile.dev.build-override]
+opt-level = 3
+
+[dependencies]
+eframe = { version = "0.26.0", features = ["default"], default-features = false   }
+egui_plot = { version = "0.26.0", features = ["default"] , default-features = false  }
+egui_extras = { version = "0.26.0", features = ["default"] , default-features = false  }
+itertools = "0.12.1"
+serde = { version = "1.0.196", features = ["derive"] }

@@ -1,0 +1,23 @@
+[package]
+name = "lab_7"
+version = "0.1.0"
+edition = "2021"
+
+[build]
+rustflags = ["-Z", "threads=8"]
+
+[profile.dev]
+split-debuginfo = "unpacked"
+debug = 0
+incremental = true
+
+[profile.dev.build-override]
+opt-level = 3
+
+[dependencies]
+itertools = "0.12.1"
+eframe = "0.27.2"
+epaint = "0.27.2"
+egui_extras = "0.27.2"
+egui_plot = "0.27.2"
+rand = "0.8.5"

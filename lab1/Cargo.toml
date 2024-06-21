@@ -1,0 +1,11 @@
+[package]
+name = "lab_1_v1"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+eframe = "0.26.0"
+egui = "0.26.0"
+egui_plot = "0.26.0"
+egui_extras = "0.26.0"
+itertools = "0.12.1"

@@ -1,0 +1,23 @@
+[package]
+name = "lab_4"
+version = "0.1.0"
+edition = "2021"
+
+[build]
+rustflags = ["-Z", "threads=8"]
+
+[profile.dev]
+split-debuginfo = "unpacked"
+debug = 0
+overflow-checks = false
+
+[profile.dev.build-override]
+opt-level = 3
+
+[dependencies]
+itertools = "0.12.1"
+eframe = {git = "https://github.com/emilk/egui.git", rev = "899bc65"}
+epaint = {git = "https://github.com/emilk/egui.git", rev = "899bc65"}
+egui_extras = {git = "https://github.com/emilk/egui.git", rev = "899bc65"}
+egui_plot = {git = "https://github.com/emilk/egui.git", rev = "899bc65"}
+rand = "0.8.5"
